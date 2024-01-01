@@ -1,0 +1,23 @@
+@model CSServer.Models.MyProjects;
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!!</title>
+</head>
+<body>
+    <div>
+        <h1>Thank you, @Model?.Name!</h1>
+            @if (Model?.Completed == true) {
+            @:It's great that you're done. The drinks are already in the fridge!
+            } else {
+            @:Sorry to hear that you can't make it, but thanks for letting us know.
+            }
+    </div>
+    Click <a asp-action="ListResponses">here</a> to see who is coming.
+</body>
+</html>

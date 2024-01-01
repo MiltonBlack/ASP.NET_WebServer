@@ -1,0 +1,45 @@
+@model CSServer.Models.MyProjects
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Form</title>
+</head>
+<body>
+    <div>
+        This is a ProjForm.cshtml view
+        <form asp-action="ProjForm" method="post">
+            <div>
+                <label asp-for="Name">Project Name:</label>
+                <input asp-for="Name" type="text" id="Name" value=""/>
+            </div>
+            <div>
+                <label asp-for="Type">Project Type:</label>
+                <input asp-for="Type" type="text" id="Type" value=""/>
+            </div>
+            <div>
+                <label asp-for="Email">Client Email:</label>
+                <input asp-for="Email" type="email" id="Email" value=""/>
+            </div>
+            <div>
+                <label asp-for="Phone">Client Phone:</label>
+                <input asp-for="Phone" type="number" id="Phone" value=""/>
+            </div>
+            <div>
+                <label asp-for="Completed">Project Completed?:</label>
+                <select asp-for="Completed">
+                    <option value="">Choose An Option</option>
+                    <option value="true">Yes, I have completed the Project</option>
+                    <option value="false">No, I havent completed the Project</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
